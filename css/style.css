@@ -609,7 +609,10 @@ h4 { font-size: 1.15rem; }
   .courses-grid { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 640px) {
-  .courses-grid { grid-template-columns: repeat(2, 1fr); }
+  .courses-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+}
+@media (max-width: 360px) {
+  .courses-grid { grid-template-columns: 1fr; }
 }
 
 .course-card {
@@ -619,27 +622,40 @@ h4 { font-size: 1.15rem; }
   padding: 1.4rem 1rem;
   text-align: center;
   border-top: 4px solid var(--primary-navy);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
+.course-card:nth-child(1) { border-top-color: var(--primary-navy); }
+.course-card:nth-child(2) { border-top-color: var(--accent-maroon); }
+.course-card:nth-child(3) { border-top-color: var(--accent-blue); }
+.course-card:nth-child(4) { border-top-color: #1a7a4a; }
+.course-card:nth-child(5) { border-top-color: #6a3d9a; }
+
 .course-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
 }
 
 .course-card .icon {
-  font-size: 2.4rem;
-  margin-bottom: 0.7rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
 }
 
 .course-card h3 {
-  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+  color: var(--primary-navy);
 }
 
 .course-card p {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
   margin-bottom: 1rem;
+  flex: 1;
 }
 
 /* ---------- STATISTICS BAR ---------- */
@@ -760,6 +776,13 @@ h4 { font-size: 1.15rem; }
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--gap-md);
+}
+
+@media (max-width: 1024px) {
+  .dept-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 640px) {
+  .dept-grid { grid-template-columns: repeat(1, 1fr); gap: 0.75rem; }
 }
 
 .dept-card {
@@ -1167,6 +1190,50 @@ h4 { font-size: 1.15rem; }
   background: #e8ecf4;
 }
 
+@media (max-width: 640px) {
+  .eligibility-table thead { display: none; }
+
+  .eligibility-table,
+  .eligibility-table tbody,
+  .eligibility-table tr,
+  .eligibility-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .eligibility-table tbody tr {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-navy);
+    border-radius: var(--radius);
+    margin-bottom: 0.75rem;
+    padding: 0.6rem 0.9rem;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .eligibility-table tbody tr:nth-child(even) { background: var(--bg-white); }
+
+  .eligibility-table td {
+    padding: 0.28rem 0;
+    border: none;
+    font-size: 0.87rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+
+  .eligibility-table td::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--primary-navy);
+    min-width: 100px;
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}
+
 /* ---------- ACADEMICS CONTENT ---------- */
 .academic-content {
   display: grid;
@@ -1515,6 +1582,55 @@ h4 { font-size: 1.15rem; }
   .principal-photo {
     max-width: 200px;
     margin: 0 auto;
+  }
+
+  /* Dept cards — single column, compact */
+  .dept-card {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    border-top: none;
+    border-left: 5px solid;
+    overflow: hidden;
+  }
+
+  .dept-card:nth-child(1) { border-left-color: var(--primary-navy); }
+  .dept-card:nth-child(2) { border-left-color: var(--accent-maroon); }
+  .dept-card:nth-child(3) { border-left-color: var(--accent-blue); }
+  .dept-card:nth-child(4) { border-left-color: #1a7a4a; }
+  .dept-card:nth-child(5) { border-left-color: #6a3d9a; }
+
+  .dept-card-top {
+    width: 72px;
+    min-width: 72px;
+    padding: 1rem 0.5rem;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .dept-card h3 {
+    font-size: 0.72rem;
+    text-align: center;
+  }
+
+  .dept-icon-circle {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+  }
+
+  .dept-card-body {
+    padding: 0.9rem 1rem;
+    flex: 1;
+  }
+
+  .dept-card p {
+    font-size: 0.82rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   /* Stats */
