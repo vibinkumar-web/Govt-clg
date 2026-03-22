@@ -1584,53 +1584,44 @@ h4 { font-size: 1.15rem; }
     margin: 0 auto;
   }
 
-  /* Dept cards — single column, compact */
+  /* Dept cards — stacked vertical on mobile */
   .dept-card {
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    border-top: none;
-    border-left: 5px solid;
+    flex-direction: column;
+    border-top: 4px solid;
+    border-left: none;
     overflow: hidden;
   }
 
-  .dept-card:nth-child(1) { border-left-color: var(--primary-navy); }
-  .dept-card:nth-child(2) { border-left-color: var(--accent-maroon); }
-  .dept-card:nth-child(3) { border-left-color: var(--accent-blue); }
-  .dept-card:nth-child(4) { border-left-color: #1a7a4a; }
-  .dept-card:nth-child(5) { border-left-color: #6a3d9a; }
-
   .dept-card-top {
-    width: 72px;
-    min-width: 72px;
-    padding: 1rem 0.5rem;
-    flex-direction: column;
-    gap: 0.4rem;
+    width: 100%;
+    padding: 1rem 1rem 0.8rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    align-items: center;
   }
 
   .dept-card h3 {
-    font-size: 0.72rem;
-    text-align: center;
+    font-size: 0.88rem;
+    text-align: left;
   }
 
   .dept-icon-circle {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
     font-size: 1.2rem;
   }
 
   .dept-card-body {
-    padding: 0.9rem 1rem;
-    flex: 1;
+    padding: 0.75rem 1rem 1rem;
   }
 
   .dept-card p {
-    font-size: 0.82rem;
-    -webkit-line-clamp: 3;
-    line-clamp: 3;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    font-size: 0.83rem;
+    overflow: visible;
+    display: block;
   }
 
   /* Stats */
