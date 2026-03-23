@@ -340,6 +340,55 @@ h4 { font-size: 1.15rem; }
   color: var(--accent-gold);
 }
 
+/* ---------- DROPDOWN ---------- */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--primary-navy);
+  min-width: 150px;
+  border-top: 3px solid var(--accent-gold);
+  box-shadow: var(--shadow-md);
+  z-index: 1100;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 0.7rem 1.2rem;
+  color: var(--text-light);
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(255,255,255,0.08);
+  color: var(--accent-gold);
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown.open .dropdown-menu {
+  display: block;
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -1345,6 +1394,11 @@ h4 { font-size: 1.15rem; }
   border-top: 4px solid var(--primary-navy);
 }
 
+.vm-card:nth-child(1) { background: #eef4ff; border-top-color: #3b6fc9; }
+.vm-card:nth-child(2) { background: #edfdf5; border-top-color: #2a9d6e; }
+.vm-card:nth-child(3) { background: #fff8e6; border-top-color: #e8a020; }
+.vm-card:nth-child(4) { background: #f4eeff; border-top-color: #7c4dcc; }
+
 .vm-card h3 {
   margin-bottom: var(--gap-sm);
 }
@@ -1555,6 +1609,28 @@ h4 { font-size: 1.15rem; }
     padding: 0.9rem 1.5rem;
     border-bottom: 1px solid rgba(255,255,255,0.05);
     width: 100%;
+  }
+
+  .nav-dropdown {
+    width: 100%;
+  }
+
+  .nav-dropdown .dropdown-toggle {
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border-top: none;
+    border-left: 3px solid var(--accent-gold);
+    box-shadow: none;
+    display: none;
+  }
+
+  .nav-dropdown.open .dropdown-menu {
+    display: block;
   }
 
   /* Hero */

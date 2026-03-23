@@ -54,6 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Mobile Dropdown Toggle ---------- */
+  document.querySelectorAll('.dropdown-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        var parent = this.closest('.nav-dropdown');
+        if (parent) parent.classList.toggle('open');
+      }
+    });
+  });
+
   /* ---------- Smooth Scroll for Anchor Links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
