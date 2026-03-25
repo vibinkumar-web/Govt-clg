@@ -252,4 +252,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Department Tab System ---------- */
+  const tabLinks = document.querySelectorAll('.dept-nav-links .tab-link[data-tab]');
+  const tabPanes = document.querySelectorAll('.tab-pane');
+
+  if (tabLinks.length && tabPanes.length) {
+    tabLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Remove active class from all links
+        tabLinks.forEach(btn => btn.classList.remove('active'));
+        // Hide all panes
+        tabPanes.forEach(pane => pane.classList.remove('active'));
+        
+        // Add active to the clicked link
+        this.classList.add('active');
+        // Let's also highlight parent if we clicked inside a dropdown
+        const parentDropdown = this.closest('.nav-dropdown');
+        if (parentDropdown) {
+          const toggle = parentDropdown.querySelector('.dropdown-toggle');
+          if (toggle) toggle.classList.add('active');
+        }
+        
+        // Show target pane
+        const targetId = this.getAttribute('data-tab');
+        const targetPane = document.getElementById(targetId);
+        if (targetPane) {
+          targetPane.classList.add('active');
+        }
+      });
+    });
+  }
+
 });

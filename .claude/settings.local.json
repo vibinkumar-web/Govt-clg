@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3 -c \":*)"
+      "Bash(python -c \":*)",
+      "Bash(python -m pip install reportlab -q)"
     ]
   }
 }
