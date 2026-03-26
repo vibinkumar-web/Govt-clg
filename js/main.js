@@ -43,10 +43,12 @@ document.addEventListener('DOMContentLoaded', function () {
     navOverlay.addEventListener('click', toggleMobileMenu);
   }
 
-  /* Close mobile menu when a nav link is clicked */
+  /* Close mobile menu only when a real page link (not dropdown toggle) is clicked */
   if (navLinks) {
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
+        /* Don't close if this is a dropdown toggle */
+        if (this.classList.contains('dropdown-toggle')) return;
         if (navLinks.classList.contains('open')) {
           toggleMobileMenu();
         }
@@ -59,6 +61,11 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('click', function (e) {
       if (window.innerWidth <= 900) {
         e.preventDefault();
+        e.stopPropagation();
+        /* Close other open dropdowns first */
+        document.querySelectorAll('.nav-dropdown.open').forEach(function (other) {
+          if (other !== toggle.closest('.nav-dropdown')) other.classList.remove('open');
+        });
         var parent = this.closest('.nav-dropdown');
         if (parent) parent.classList.toggle('open');
       }
