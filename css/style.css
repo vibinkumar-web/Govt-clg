@@ -389,6 +389,15 @@ h4 { font-size: 1.15rem; }
   display: block;
 }
 
+@media (max-width: 900px) {
+  .nav-dropdown:hover .dropdown-menu {
+    display: none;
+  }
+  .nav-dropdown.open .dropdown-menu {
+    display: block;
+  }
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
