@@ -3,10 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Courses Offered at Government Arts and Science College, Sankarankovil — B.A. English, B.A. Sociology, B.Com, B.Sc. Computer Science, B.Sc. Statistics.">
+  <meta name="description" content="Courses Offered at Government Arts and Science College, Sankarankovil � B.A. English, B.A. Sociology, B.Com, B.Sc. Computer Science, B.Sc. Statistics.">
   <title>Courses Offered | Government Arts and Science College, Sankarankovil</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/sankarankovil-college-logo-1.png" type="image/png">
+  <style>
+    .course-meta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.4rem 0.6rem;
+      margin-top: auto;
+      padding-top: 0.8rem;
+    }
+    .course-meta span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      background: #f0f3fa;
+      color: var(--primary-navy);
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+  </style>
 </head>
 <body>
 
@@ -57,21 +76,32 @@
           </ul>
         </div>
         <div class="nav-dropdown">
-          <a href="#" class="dropdown-toggle active">Academics &#9660;</a>
-          <ul class="dropdown-menu">
-            <li><a href="courses-offered.html" class="active">Courses Offered</a></li>
-            <li><a href="departments.html">Departments</a></li>
-          </ul>
-        </div>
-        <div class="nav-dropdown">
           <a href="#" class="dropdown-toggle">Administration &#9660;</a>
           <ul class="dropdown-menu">
             <li><a href="principal.html">Principal</a></li>
             <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
           </ul>
         </div>
-        <a href="examinations.html">Examinations</a>
-        <a href="admissions.html">Admissions</a>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle active">Academics &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="courses-offered.html" class="active">Courses Offered</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="clp.html">CLP</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="submenu-toggle">Committee &#9654;</a>
+              <ul class="submenu">
+                <li><a href="anti-ragging.html">Anti Ragging</a></li>
+                <li><a href="iqac.html">IQAC</a></li>
+                <li><a href="nirf-aishe.html">NIRF &amp; AISHE</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a href="admissions.html">Admission</a>
+        <a href="examinations.html">Examination</a>
+        <a href="placement.html">Placement</a>
+        <a href="alumni.html">Alumni</a>
         <div class="nav-dropdown">
           <a href="#" class="dropdown-toggle">Activities &#9660;</a>
           <ul class="dropdown-menu">
@@ -80,7 +110,9 @@
             <li><a href="sports.html">Sports</a></li>
           </ul>
         </div>
+        <a href="forms.html">Forms</a>
         <a href="gallery.html">Gallery</a>
+        <a href="weblinks.html">Weblinks</a>
         <a href="contact.html">Contact</a>
       </div>
     </div>
@@ -98,33 +130,169 @@
   <!-- ========== COURSES OFFERED ========== -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Courses Offered</h2>
-      <div class="academic-content reveal">
-        <div class="main-content">
-          <div class="timeline">
-            <div class="timeline-item">
-              <h4>B.A. English</h4>
-              <p>A three-year undergraduate programme focusing on English literature, linguistics, communication, and language skills. Students engage with classical and contemporary texts alongside language lab sessions.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>B.A. Sociology</h4>
-              <p>A three-year programme exploring social structures, human behaviour, community development, and social research methods. Prepares students for social work, administration, and further research.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>B.Com &mdash; Commerce</h4>
-              <p>A three-year undergraduate programme covering accounting, finance, taxation, business law, and commerce. Includes Tally and GST certification as value-added components.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>B.Sc. Computer Science</h4>
-              <p>A three-year programme in programming, data structures, database management, networking, and software development. Equips students for IT careers and higher studies.</p>
-            </div>
-            <div class="timeline-item">
-              <h4>B.Sc. Statistics</h4>
-              <p>A three-year programme covering statistical theory, probability, data analysis, and mathematical methods. Opens pathways to research, banking, and analytics sectors.</p>
-            </div>
+      <h2 class="section-title">Programmes Offered</h2>
+
+      <div class="courses-grid reveal">
+
+        <div class="course-card">
+          <div class="icon">&#128218;</div>
+          <h3>B.A. English</h3>
+          <p>Three-year undergraduate programme in English literature, linguistics, and communication skills.</p>
+          <div class="course-meta">
+            <span>&#128197; 3 Years</span>
+            <span>&#127757; English</span>
+            <span>&#128101; 64 Seats</span>
           </div>
         </div>
+
+        <div class="course-card">
+          <div class="icon">&#128101;</div>
+          <h3>B.A. Sociology</h3>
+          <p>Three-year programme in social structures, human behaviour, and community development.</p>
+          <div class="course-meta">
+            <span>&#128197; 3 Years</span>
+            <span>&#127757; English</span>
+            <span>&#128101; 64 Seats</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="icon">&#128188;</div>
+          <h3>B.Com</h3>
+          <p>Three-year programme in accounting, finance, taxation, business law, and commerce.</p>
+          <div class="course-meta">
+            <span>&#128197; 3 Years</span>
+            <span>&#127757; English</span>
+            <span>&#128101; 64 Seats</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="icon">&#128187;</div>
+          <h3>B.Sc. Computer Science</h3>
+          <p>Three-year programme in programming, data structures, networking, and software development.</p>
+          <div class="course-meta">
+            <span>&#128197; 3 Years</span>
+            <span>&#127757; English</span>
+            <span>&#128101; 48 Seats</span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="icon">&#128202;</div>
+          <h3>B.Sc. Statistics</h3>
+          <p>Three-year programme in statistical theory, probability, data analysis, and mathematical methods.</p>
+          <div class="course-meta">
+            <span>&#128197; 3 Years</span>
+            <span>&#127757; English</span>
+            <span>&#128101; 48 Seats</span>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Summary Table -->
+      <div class="reveal" style="overflow-x:auto;margin-top:3rem;">
+        <table class="info-table" style="width:100%;border-collapse:collapse;font-size:0.92rem;">
+          <thead>
+            <tr style="background:var(--primary-navy);color:#fff;">
+              <th style="padding:0.75rem 1rem;text-align:center;">Sl.No.</th>
+              <th style="padding:0.75rem 1rem;text-align:left;">Degree</th>
+              <th style="padding:0.75rem 1rem;text-align:center;">Medium</th>
+              <th style="padding:0.75rem 1rem;text-align:center;">Sanctioned Strength</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">1</td>
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;">B.A. [ENGLISH]</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">ENGLISH</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">64</td>
+            </tr>
+            <tr>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">2</td>
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;">B.A. [SOCIOLOGY]</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">ENGLISH</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">64</td>
+            </tr>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">3</td>
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;">B.COM</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">ENGLISH</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">64</td>
+            </tr>
+            <tr>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">4</td>
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;">B.SC [COMPUTER SCIENCE]</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">ENGLISH</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">48</td>
+            </tr>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">5</td>
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;">B.SC [STATISTICS]</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">ENGLISH</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;">48</td>
+            </tr>
+            <tr style="background:var(--primary-navy);color:#fff;font-weight:700;">
+              <td colspan="3" style="padding:0.7rem 1rem;text-align:center;border:1px solid #e0e4ed;">TOTAL</td>
+              <td style="padding:0.7rem 1rem;text-align:center;border:1px solid #e0e4ed;">288</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Eligibility -->
+      <p class="reveal" style="margin-top:1.75rem;font-size:0.95rem;font-weight:600;color:var(--primary-navy);letter-spacing:0.3px;">
+        ELIGIBILITY CRITERIA &nbsp;:&nbsp; DC COMMUNICATION
+      </p>
+
+      <!-- Post Matric Scholarship Details -->
+      <div class="reveal" style="overflow-x:auto;margin-top:3rem;">
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--primary-navy);margin-bottom:1rem;">Post Matric Scholarship Details</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:0.9rem;">
+          <thead>
+            <tr style="background:var(--primary-navy);color:#fff;">
+              <th style="padding:0.7rem 1rem;text-align:left;border:1px solid #c0c8dc;min-width:120px;">SCHOLARSHIP</th>
+              <th style="padding:0.7rem 1rem;text-align:center;border:1px solid #c0c8dc;">2020-21</th>
+              <th style="padding:0.7rem 1rem;text-align:center;border:1px solid #c0c8dc;">2021-22</th>
+              <th style="padding:0.7rem 1rem;text-align:center;border:1px solid #c0c8dc;">2022-23</th>
+              <th style="padding:0.7rem 1rem;text-align:center;border:1px solid #c0c8dc;">2023-24</th>
+              <th style="padding:0.7rem 1rem;text-align:center;border:1px solid #c0c8dc;">2024-25</th>
+              <th style="padding:0.7rem 1rem;text-align:center;border:1px solid #c0c8dc;">2025-26</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;font-weight:600;">BC/MBC</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+            </tr>
+            <tr>
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;font-weight:600;">SC/ST</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+            </tr>
+            <tr style="background:#f8f9fb;font-weight:700;">
+              <td style="padding:0.65rem 1rem;border:1px solid #e0e4ed;">Total</td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+              <td style="padding:0.65rem 1rem;text-align:center;border:1px solid #e0e4ed;"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
     </div>
   </section>
 

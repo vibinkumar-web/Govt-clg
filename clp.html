@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Computer Literacy Programme (CLP) — Government Arts and Science College, Sankarankovil. CLP enriches non-computer science students with essential computer skills.">
+  <title>CLP | Government Arts and Science College, Sankarankovil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/sankarankovil-college-logo-1.png" type="image/png">
+  <style>
+    .clp-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .clp-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: #444;
+      line-height: 1.65;
+    }
+    .clp-list li::before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      min-width: 8px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      margin-top: 0.57rem;
+    }
+
+    .workload-box {
+      background: #f0f3fa;
+      border-left: 4px solid var(--primary-navy);
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.25rem;
+      font-size: 0.95rem;
+      color: var(--primary-navy);
+    }
+    .workload-box .wl-row {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .workload-box .wl-item {
+      font-weight: 600;
+      min-width: 200px;
+    }
+    .workload-box .wl-item span {
+      font-weight: 400;
+      color: #555;
+    }
+
+    .role-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.8rem;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+    .badge-chair      { background: var(--primary-navy); color: #fff; }
+    .badge-coord      { background: #8b1c2e; color: #fff; }
+    .badge-member     { background: #1a6e3c; color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== TOP BAR ========== -->
+  <div class="top-bar">
+    <div class="container">
+      <span>Welcome to Government Arts and Science College, Sankarankovil</span>
+      <div class="top-bar-contact">
+        <span>&#9742; 04636 &ndash; 291085</span>
+        <span>&#9993; gascskovil@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== COLLEGE HEADER ========== -->
+  <header class="college-header">
+    <div class="container">
+      <div class="college-logo">
+        <img src="images/sankarankovil-college-logo-1.png" alt="GASC Sankarankovil Logo" style="width:70px;height:70px;object-fit:contain;">
+      </div>
+      <div class="college-name">
+        <h1>Government Arts and Science College, Sankarankovil</h1>
+        <span class="tagline">Affiliated to Manonmaniam Sundaranar University | Estd. June 2020</span>
+      </div>
+      <div class="header-right">
+        <strong>Affiliated to MSUniv, Tirunelveli</strong><br>
+        Co-Educational | Tenkasi District
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="mainNav">
+    <div class="container">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">About &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="history.html">History of College</a></li>
+            <li><a href="vision-mission.html">Vision, Mission &amp; Motto</a></li>
+            <li><a href="commencement.html">Commencement of Course</a></li>
+            <li><a href="former-principals.html">Former Principal's List</a></li>
+            <li><a href="college-calendar.html">College Calendar</a></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Administration &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="principal.html">Principal</a></li>
+            <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle active">Academics &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="courses-offered.html">Courses Offered</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="clp.html" class="active">CLP</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="submenu-toggle">Committee &#9654;</a>
+              <ul class="submenu">
+                <li><a href="anti-ragging.html">Anti Ragging</a></li>
+                <li><a href="iqac.html">IQAC</a></li>
+                <li><a href="nirf-aishe.html">NIRF &amp; AISHE</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a href="admissions.html">Admission</a>
+        <a href="examinations.html">Examination</a>
+        <a href="placement.html">Placement</a>
+        <a href="alumni.html">Alumni</a>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Activities &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="nss.html">NSS</a></li>
+            <li><a href="yrc.html">YRC</a></li>
+            <li><a href="sports.html">Sports</a></li>
+          </ul>
+        </div>
+        <a href="forms.html">Forms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="weblinks.html">Weblinks</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ========== PAGE BANNER ========== -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Computer Literacy Programme</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> &raquo; Academics &raquo; CLP</p>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT CLP ========== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About CLP</h2>
+      <div class="about-content-block reveal">
+        <p>Computer Literacy Programme was initiated by the Government of Tamil Nadu in all Government colleges to enrich all undergraduate non-computer science students from the year <strong>2000&ndash;2001</strong>. A separate lab was established with the computer and other necessary equipment by <strong>ELCOT</strong>. An examination is conducted by the <strong>Directorate of Collegiate Education, Chennai</strong> at the end of the programme and a certificate is issued.</p>
+        <p style="margin-top:0.75rem;">This programme is regulated by a CLP monitoring committee. All Non-computer science I year UG students benefit from this programme every year.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== AIM ========== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Aim of the Programme</h2>
+      <ul class="clp-list reveal">
+        <li>To impart Computer knowledge to all the non-Computer Science students.</li>
+        <li>To make all the college going students computer literate.</li>
+        <li>To motivate the non-computer science students to apply Computer technology in their respective fields of study.</li>
+        <li>To introduce modern Computer technology to staff members for teaching and evaluation techniques.</li>
+        <li>The jobs have been installed for visually impaired students.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== WORK LOAD ========== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Work Load for CLP Staff Members</h2>
+      <div class="reveal">
+        <div class="workload-box">
+          <div class="wl-row">
+            <div class="wl-item">Theory &nbsp;: <span>60 Hours (Per Month)</span></div>
+            <div class="wl-item">Practical &nbsp;: <span>90 Hours (Per Month)</span></div>
+            <div class="wl-item">Internet &nbsp;: <span>15 Hours (included in Practical hours)</span></div>
+          </div>
+        </div>
+        <ul class="clp-list" style="margin-top:1.5rem;">
+          <li>A final common examination at the end of the course.</li>
+          <li>Certificates are issued by the Director of Collegiate Education on successful completion of the training course.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFITS ========== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Benefits of CLP</h2>
+      <div class="about-content-block reveal">
+        <p>The Computer Literacy Program is being conducted for Non-computer science students. The students are being trained on state-of-the-art technologies both theoretically and practically. The orientation of the training is towards job-fetching in the IT market with renowned skills in recent developments.</p>
+        <p style="margin-top:0.75rem;"><strong>Course Curriculum:</strong> The students are trained on the basic knowledge of MS-Office, Internet technologies, basics of C language and HTML. A common examination (theory) is conducted for the CLP students throughout Tamil Nadu, at the end of the course. Based on their performance, a Certificate is issued from the Government of Tamil Nadu which is of great potential to them during their placement opportunities.</p>
+      </div>
+
+      <ul class="clp-list reveal" style="margin-top:1.5rem;">
+        <li>CLP is a mandatory course for all I year non-computer science UG students, conducted with the support of Government of Tamil Nadu.</li>
+        <li>The duration of the course is <strong>1 year</strong> and the course fee is <strong>Rs. 1,000/-</strong></li>
+        <li>The Tamil Nadu Government conducts a common written Examination and issues certificates to the successful candidates.</li>
+        <li>They can register this certificate in employment office for employment opportunity.</li>
+      </ul>
+
+      <div class="about-content-block reveal" style="margin-top:1.5rem;">
+        <p>This Programme helps the students to acquire essential knowledge in Computer. The students become familiar with the methods of PowerPoint presentation, e-mailing, and Internet usage. With the help of free laptop issued by the Tamil Nadu Government to the students, they are able to acquire updated knowledge.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CLP COMMITTEE MEMBERS ========== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">CLP Committee Members</h2>
+
+      <div class="reveal" style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.92rem;">
+          <thead>
+            <tr style="background:var(--primary-navy);color:#fff;">
+              <th style="padding:0.8rem 1rem;text-align:center;border:1px solid #c0c8dc;width:60px;">S.No.</th>
+              <th style="padding:0.8rem 1rem;text-align:left;border:1px solid #c0c8dc;">Name</th>
+              <th style="padding:0.8rem 1rem;text-align:left;border:1px solid #c0c8dc;">Designation</th>
+              <th style="padding:0.8rem 1rem;text-align:center;border:1px solid #c0c8dc;">Faculty In-charge</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;font-weight:700;">1</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;font-weight:700;color:var(--primary-navy);">Dr. G. Venugopal</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;">Principal [FAC]</td>
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;">
+                <span class="role-badge badge-chair">Chair Person</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;font-weight:700;">2</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;font-weight:700;color:var(--primary-navy);">Dr. R. Shenbagavalli</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;">Associate Professor &amp; Head of Computer Science</td>
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;">
+                <span class="role-badge badge-coord">Coordinator</span>
+              </td>
+            </tr>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;font-weight:700;">3</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;font-weight:700;color:var(--primary-navy);">Dr. K. Kalagopi</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;">Associate Professor &amp; Head of English</td>
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;">
+                <span class="role-badge badge-member">Member</span>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;font-weight:700;">4</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;font-weight:700;color:var(--primary-navy);">Dr. N. Sukumaran</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;">Assistant Professor &amp; Head of Sociology</td>
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;">
+                <span class="role-badge badge-member">Member</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FACULTY DETAILS ========== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Faculty Details</h2>
+
+      <div class="reveal" style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:0.92rem;">
+          <thead>
+            <tr style="background:var(--primary-navy);color:#fff;">
+              <th style="padding:0.8rem 1rem;text-align:center;border:1px solid #c0c8dc;width:60px;">S.No.</th>
+              <th style="padding:0.8rem 1rem;text-align:left;border:1px solid #c0c8dc;">Name of the Faculty</th>
+              <th style="padding:0.8rem 1rem;text-align:left;border:1px solid #c0c8dc;">Qualification</th>
+              <th style="padding:0.8rem 1rem;text-align:left;border:1px solid #c0c8dc;">Date of Joining</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.75rem 1rem;text-align:center;border:1px solid #e0e4ed;font-weight:700;">1</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;font-weight:700;color:var(--primary-navy);">Mrs. Nithya</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;">MCA., M.Phil</td>
+              <td style="padding:0.75rem 1rem;border:1px solid #e0e4ed;color:#888;">&mdash;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONSOLIDATE STATEMENT ========== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Consolidate Statement</h2>
+      <p class="reveal" style="color:#555;margin-bottom:1.5rem;">Number of non-Computer Science Students (UG) who have undergone Computer Literacy Programme training for the last 6 years.</p>
+
+      <div class="reveal" style="overflow-x:auto;">
+        <table style="width:100%;max-width:480px;border-collapse:collapse;font-size:0.92rem;">
+          <thead>
+            <tr style="background:var(--primary-navy);color:#fff;">
+              <th style="padding:0.8rem 1.25rem;text-align:left;border:1px solid #c0c8dc;">Batch</th>
+              <th style="padding:0.8rem 1.25rem;text-align:center;border:1px solid #c0c8dc;">No. of Students</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.7rem 1.25rem;border:1px solid #e0e4ed;">2020 &ndash; 2021</td>
+              <td style="padding:0.7rem 1.25rem;text-align:center;border:1px solid #e0e4ed;color:#888;">&mdash;</td>
+            </tr>
+            <tr>
+              <td style="padding:0.7rem 1.25rem;border:1px solid #e0e4ed;">2021 &ndash; 2022</td>
+              <td style="padding:0.7rem 1.25rem;text-align:center;border:1px solid #e0e4ed;color:#888;">&mdash;</td>
+            </tr>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.7rem 1.25rem;border:1px solid #e0e4ed;">2022 &ndash; 2023</td>
+              <td style="padding:0.7rem 1.25rem;text-align:center;border:1px solid #e0e4ed;font-weight:600;">189</td>
+            </tr>
+            <tr>
+              <td style="padding:0.7rem 1.25rem;border:1px solid #e0e4ed;">2023 &ndash; 2024</td>
+              <td style="padding:0.7rem 1.25rem;text-align:center;border:1px solid #e0e4ed;font-weight:600;">251</td>
+            </tr>
+            <tr style="background:#f8f9fb;">
+              <td style="padding:0.7rem 1.25rem;border:1px solid #e0e4ed;">2024 &ndash; 2025</td>
+              <td style="padding:0.7rem 1.25rem;text-align:center;border:1px solid #e0e4ed;font-weight:600;">253</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Government Arts and Science College, Sankarankovil</h4>
+          <p>A government institution affiliated to Manonmaniam Sundaranar University. Committed to academic excellence and holistic development since June 2020.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="history.html">About Us</a></li>
+            <li><a href="courses-offered.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>Thiruvengadam Road,<br>Sankarankovil,<br>Tamil Nadu &mdash; 627 756</p>
+          <p>&#9742; 04636 &ndash; 291085</p>
+          <p>&#9993; gascskovil@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Government Arts and Science College, Sankarankovil. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>

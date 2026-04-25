@@ -72,6 +72,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
+  /* ---------- Mobile Submenu Toggle (Committee inside Academics) ---------- */
+  document.querySelectorAll('.submenu-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        e.stopPropagation();
+        var parent = this.closest('.dropdown-submenu');
+        if (parent) parent.classList.toggle('open');
+      }
+    });
+  });
+
   /* ---------- Smooth Scroll for Anchor Links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {

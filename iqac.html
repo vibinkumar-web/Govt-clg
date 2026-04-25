@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Internal Quality Assurance Cell (IQAC) at Government Arts and Science College, Sankarankovil — objectives, strategies, functions and composition.">
+  <title>IQAC | Government Arts and Science College, Sankarankovil</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/sankarankovil-college-logo-1.png" type="image/png">
+  <style>
+    .iqac-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0 0 0;
+    }
+    .iqac-list li {
+      padding: 0.45rem 0 0.45rem 1.8rem;
+      position: relative;
+      font-size: 0.95rem;
+      color: #333;
+    }
+    .iqac-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #c9a84c;
+    }
+    .iqac-section-heading {
+      margin-top: 1.75rem;
+      color: var(--primary-navy);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+      margin-top: 1.5rem;
+    }
+    .data-table thead tr {
+      background: var(--primary-navy);
+      color: #fff;
+    }
+    .data-table th {
+      padding: 0.8rem 1.1rem;
+      text-align: left;
+      border: 1px solid #c0c8dc;
+    }
+    .data-table th.center { text-align: center; }
+    .data-table tbody tr:nth-child(even) { background: #f8f9fb; }
+    .data-table td {
+      padding: 0.75rem 1.1rem;
+      border: 1px solid #e0e4ed;
+      vertical-align: top;
+    }
+    .data-table td.sl { text-align: center; font-weight: 600; }
+    .data-table td.name-col { font-weight: 700; color: var(--primary-navy); }
+    .role-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      color: #fff;
+      white-space: nowrap;
+    }
+    .badge-chair    { background: var(--primary-navy); }
+    .badge-coord    { background: #8b1a2f; }
+    .badge-teacher  { background: #1a6e3c; }
+    .badge-admin    { background: #5c3190; }
+    .badge-society  { background: #b56c00; }
+    .badge-alumni   { background: #0d5c8a; }
+    .badge-student  { background: #3d7a3d; }
+    .badge-employer { background: #444; }
+  </style>
+</head>
+<body>
+
+  <!-- ========== TOP BAR ========== -->
+  <div class="top-bar">
+    <div class="container">
+      <span>Welcome to Government Arts and Science College, Sankarankovil</span>
+      <div class="top-bar-contact">
+        <span>&#9742; 04636 &ndash; 291085</span>
+        <span>&#9993; gascskovil@gmail.com</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== COLLEGE HEADER ========== -->
+  <header class="college-header">
+    <div class="container">
+      <div class="college-logo">
+        <img src="images/sankarankovil-college-logo-1.png" alt="GASC Sankarankovil Logo" style="width:70px;height:70px;object-fit:contain;">
+      </div>
+      <div class="college-name">
+        <h1>Government Arts and Science College, Sankarankovil</h1>
+        <span class="tagline">Affiliated to Manonmaniam Sundaranar University | Estd. June 2020</span>
+      </div>
+      <div class="header-right">
+        <strong>Affiliated to MSUniv, Tirunelveli</strong><br>
+        Co-Educational | Tenkasi District
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="mainNav">
+    <div class="container">
+      <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">About &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="history.html">History of College</a></li>
+            <li><a href="vision-mission.html">Vision, Mission &amp; Motto</a></li>
+            <li><a href="commencement.html">Commencement of Course</a></li>
+            <li><a href="former-principals.html">Former Principal's List</a></li>
+            <li><a href="college-calendar.html">College Calendar</a></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Administration &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="principal.html">Principal</a></li>
+            <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
+          </ul>
+        </div>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Academics &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="courses-offered.html">Courses Offered</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="clp.html">CLP</a></li>
+            <li class="dropdown-submenu">
+              <a href="#" class="submenu-toggle">Committee &#9654;</a>
+              <ul class="submenu">
+                <li><a href="anti-ragging.html">Anti Ragging</a></li>
+                <li><a href="iqac.html">IQAC</a></li>
+                <li><a href="nirf-aishe.html">NIRF &amp; AISHE</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <a href="admissions.html">Admission</a>
+        <a href="examinations.html">Examination</a>
+        <a href="placement.html">Placement</a>
+        <a href="alumni.html">Alumni</a>
+        <div class="nav-dropdown">
+          <a href="#" class="dropdown-toggle">Activities &#9660;</a>
+          <ul class="dropdown-menu">
+            <li><a href="nss.html">NSS</a></li>
+            <li><a href="yrc.html">YRC</a></li>
+            <li><a href="sports.html">Sports</a></li>
+          </ul>
+        </div>
+        <a href="forms.html">Forms</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="weblinks.html">Weblinks</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ========== PAGE BANNER ========== -->
+  <section class="page-banner">
+    <div class="container">
+      <h1>Internal Quality Assurance Cell (IQAC)</h1>
+      <p class="breadcrumb"><a href="index.html">Home</a> &raquo; Committee &raquo; IQAC</p>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT IQAC ========== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">About IQAC</h2>
+      <div class="about-content-block reveal">
+        <p>The prime task of the IQAC is to develop a system for conscious, consistent and catalytic improvement in the overall performance of its institution.</p>
+        <p style="margin-top:0.75rem;"><strong>Dr. N. Sukumaran</strong>, Assistant Professor &amp; Head of Sociology is the Co-Ordinator for IQAC.</p>
+
+        <h3 class="iqac-section-heading">Objectives</h3>
+        <p>IQAC will facilitate / contribute:</p>
+        <ul class="iqac-list">
+          <li>To enrich clarity and focus in institution functioning towards quality enhancement and quality culture.</li>
+          <li>To the enhancement and integration among the various activities of the institution to improve institutional functioning.</li>
+          <li>To act as a change agent in the institution.</li>
+        </ul>
+
+        <h3 class="iqac-section-heading">Strategies</h3>
+        <p>IQAC shall evolve procedures for:</p>
+        <ul class="iqac-list">
+          <li>Ensuring that administrative and academic duties are completed on time, effectively, and progressively.</li>
+          <li>Reasonably priced and accessible educational opportunities for all societal groups with modern teaching and learning techniques optimized and integrated.</li>
+          <li>The validity of the assessment methods.</li>
+          <li>Ensuring that the services and support structure are adequate, maintained, and operational.</li>
+        </ul>
+
+        <h3 class="iqac-section-heading">Functions</h3>
+        <ul class="iqac-list">
+          <li>Development and application of quality benchmarks / parameters for various academic and administrative activities of the institution.</li>
+          <li>Facilitating the creation of a learner-centric environment conducive to quality education and faculty maturation to adopt the required knowledge and technology for participatory teaching and learning process.</li>
+          <li>Arrangement for feedback response from students, parents and other stakeholders on quality-related institutional processes.</li>
+          <li>Dissemination of information on various quality parameters of higher education.</li>
+          <li>Organization of inter and intra institutional workshops, seminars on quality related themes and promotion of quality circles.</li>
+          <li>Documentation of the various programmes / activities leading to quality improvement.</li>
+          <li>Acting as a nodal agency of the institution for coordinating quality-related activities, including adoption and dissemination of best practices.</li>
+          <li>Development and maintenance of institutional database through MIS for the purpose of maintaining / enhancing the institutional quality.</li>
+          <li>Development of Quality Culture in the institution.</li>
+          <li>Preparation of the Annual Quality Assurance Report (AQAR) as per guidelines and parameters of NAAC, to be submitted to NAAC.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== IQAC COMPOSITION ========== -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">IQAC &ndash; Composition</h2>
+      <div class="reveal" style="overflow-x:auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th class="center" style="width:60px;">Sl. No.</th>
+              <th>Name &amp; Designation</th>
+              <th style="width:200px;">Position</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="sl">1</td>
+              <td class="name-col">Dr. G. Venugopal<br><span style="font-weight:400;font-size:0.88rem;">Principal [FAC]</span></td>
+              <td><span class="role-badge badge-chair">Chairperson</span></td>
+            </tr>
+            <tr>
+              <td class="sl">2</td>
+              <td class="name-col">Dr. N. Sukumaran<br><span style="font-weight:400;font-size:0.88rem;">Assistant Professor &amp; Head of Sociology</span></td>
+              <td><span class="role-badge badge-coord">Co-ordinator</span></td>
+            </tr>
+            <tr>
+              <td class="sl">3</td>
+              <td class="name-col">Dr. R. Shenbagavalli<br><span style="font-weight:400;font-size:0.88rem;">Associate Professor &amp; Head of CS</span></td>
+              <td><span class="role-badge badge-teacher">Teacher Representative</span></td>
+            </tr>
+            <tr>
+              <td class="sl">4</td>
+              <td class="name-col">Dr. K. Kalagopi<br><span style="font-weight:400;font-size:0.88rem;">Associate Professor &amp; Head of CS</span></td>
+              <td><span class="role-badge badge-teacher">Teacher Representative</span></td>
+            </tr>
+            <tr>
+              <td class="sl">5</td>
+              <td class="name-col">Dr. D. Selvam<br><span style="font-weight:400;font-size:0.88rem;">Physical Director</span></td>
+              <td><span class="role-badge badge-teacher">Teacher Representative</span></td>
+            </tr>
+            <tr>
+              <td class="sl">6</td>
+              <td class="name-col">Mr. T. Srinivasan</td>
+              <td><span class="role-badge badge-admin">Bursar</span></td>
+            </tr>
+            <tr>
+              <td class="sl">7</td>
+              <td class="name-col">Mr. Anand</td>
+              <td><span class="role-badge badge-society">Local Society</span></td>
+            </tr>
+            <tr>
+              <td class="sl">8</td>
+              <td class="name-col">Mr. Ramar<br><span style="font-weight:400;font-size:0.88rem;">B.Com [2020&ndash;21] Batch</span></td>
+              <td><span class="role-badge badge-alumni">Alumni</span></td>
+            </tr>
+            <tr>
+              <td class="sl">9</td>
+              <td class="name-col"><span style="font-weight:400;font-size:0.88rem;">(2024&ndash;2027) Batch</span></td>
+              <td><span class="role-badge badge-student">Student</span></td>
+            </tr>
+            <tr>
+              <td class="sl">10</td>
+              <td class="name-col">Mr. G. Maheshkumar<br><span style="font-weight:400;font-size:0.88rem;">Virtuo Technologies, Sivakasi</span></td>
+              <td><span class="role-badge badge-employer">Employer</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Government Arts and Science College, Sankarankovil</h4>
+          <p>A government institution affiliated to Manonmaniam Sundaranar University. Committed to academic excellence and holistic development since June 2020.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="departments.html">Departments</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <p>Thiruvengadam Road,<br>Sankarankovil,<br>Tamil Nadu &mdash; 627 756</p>
+          <p>&#9742; 04636 &ndash; 291085</p>
+          <p>&#9993; gascskovil@gmail.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        &copy; 2026 Government Arts and Science College, Sankarankovil. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top">&#8679;</button>
+  <script src="js/main.js"></script>
+</body>
+</html>
