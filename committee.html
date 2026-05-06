@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,44 @@
   <title>Committee | Government Arts and Science College, Sankarankovil</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/sankarankovil-college-logo-1.png" type="image/png">
+  <style>
+    .mandatory-committee-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1.1rem 0.75rem;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--primary-navy);
+      font-weight: 700;
+      font-size: 0.85rem;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+      cursor: default;
+      line-height: 1.4;
+    }
+    a.mandatory-committee-card { cursor: pointer; }
+    .committee-sub-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-left: 4px solid var(--primary-blue, #1a3c6e);
+      padding-left: 0.75rem;
+      margin: 1.8rem 0 0.75rem;
+    }
+    .mandatory-committee-card:hover {
+      background: var(--primary-navy);
+      color: #fff;
+    }
+    .mandatory-committee-card .mc-name {
+      color: inherit;
+    }
+  </style>
 </head>
 <body>
 
@@ -62,6 +100,7 @@
             <li><a href="principal.html">Principal</a></li>
             <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
             <li><a href="committee.html">Committee</a></li>
+            <li><a href="award-recognition.html">Award &amp; Recognition</a></li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -81,6 +120,7 @@
           <ul class="dropdown-menu">
             <li><a href="nss.html">NSS</a></li>
             <li><a href="yrc.html">YRC</a></li>
+            <li><a href="rrc.html">RRC</a></li>
             <li><a href="sports.html">Sports</a></li>
           </ul>
         </div>
@@ -164,24 +204,26 @@
     <div class="container">
       <h2 class="section-title">Mandatory Committee</h2>
       <div class="mandatory-committee-grid reveal">
-        <div class="mandatory-committee-card"><span class="mc-icon">&#127963;</span><span class="mc-name">NAAC</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#11088;</span><span class="mc-name">IQAC</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128196;</span><span class="mc-name">NIRE &amp; AISHE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#127979;</span><span class="mc-name">RUSA</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#127760;</span><span class="mc-name">COLLEGE WEBSITE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128209;</span><span class="mc-name">UMIS DATA MAINTENANCE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128188;</span><span class="mc-name">PLACEMENT CELL</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128218;</span><span class="mc-name">NAAN MUDHALVAN</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128105;&#8205;&#127979;</span><span class="mc-name">PUDHUMAI PENN AND THAMIZH PUDHALVAN</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#127942;</span><span class="mc-name">SPORTS COMMITTEE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#9878;</span><span class="mc-name">DISCIPLINE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128737;</span><span class="mc-name">ANTI-HARASSMENT</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#9876;</span><span class="mc-name">VISHAKAHA COMMITTEE [ICE]</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#129309;</span><span class="mc-name">SC &amp; ST WELFARE COMMITTEE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128197;</span><span class="mc-name">COLLEGE CALENDER PREPARATION</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#128240;</span><span class="mc-name">COLLEGE MAGAZINE AND ANNUAL REPORT PREPARATION COMMITTEE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#10084;</span><span class="mc-name">STUDENT WELFARE</span></div>
-        <div class="mandatory-committee-card"><span class="mc-icon">&#9855;</span><span class="mc-name">PWD COORDINATION COMMITTEE</span></div>
+        <a href="" class="mandatory-committee-card">NAAC</a>
+        <a href="iqac.html" class="mandatory-committee-card">IQAC</a>
+        <a href="nirf-aishe.html" class="mandatory-committee-card">NIRF &amp; AISHE</a>
+        <a href="anti-ragging.html" class="mandatory-committee-card">Anti-Ragging</a>
+        <a href="rusa.html" class="mandatory-committee-card">RUSA</a>
+        <a href="college-website-committee.html" class="mandatory-committee-card">College Website</a>
+        <a href="umis-data-maintenance.html" class="mandatory-committee-card">UMIS Data Maintenance</a>
+        <div class="mandatory-committee-card">Placement Cell</div>
+        <a href="sports-committee.html" class="mandatory-committee-card">Sports Committee</a>
+        <a href="discipline-welfare-committee.html" class="mandatory-committee-card">Discipline</a>
+        <a href="icc.html" class="mandatory-committee-card">Internal Complaints Committee (ICC)</a>
+        <a href="sc-st-welfare-committee.html" class="mandatory-committee-card">SC &amp; ST Welfare Committee</a>
+        <a href="college-calendar-preparation.html" class="mandatory-committee-card">College Calendar Preparation</a>
+        <a href="college-magazine-committee.html" class="mandatory-committee-card">College Magazine &amp; Annual Report</a>
+        <div class="mandatory-committee-card">Student Welfare</div>
+        <a href="pwd-coordination-committee.html" class="mandatory-committee-card">PWD Coordination Committee</a>
+        <a href="pta.html" class="mandatory-committee-card">PTA</a>
+        <a href="finance.html" class="mandatory-committee-card">Finance</a>
+        <a href="womencell.html" class="mandatory-committee-card">Women Cell</a>
+        <a href="maintaininginfrastructure.html" class="mandatory-committee-card">Maintaining Infrastructure</a>
       </div>
     </div>
   </section>
@@ -189,7 +231,7 @@
   
 
   
-  <!-- ========== FOOTER ========== -->
+<!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">

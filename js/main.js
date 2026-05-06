@@ -165,21 +165,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- Gallery Category Filter ---------- */
   if (filterBtns.length && galleryItems.length) {
+    var othersWrap = document.getElementById('galleryOthers');
+
+    /* Show others wrap on initial load (All is default active) */
+    if (othersWrap) othersWrap.style.display = '';
+
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
-        /* Update active button */
         filterBtns.forEach(function (b) { b.classList.remove('active'); });
         this.classList.add('active');
 
         var category = this.getAttribute('data-filter');
 
         galleryItems.forEach(function (item) {
+          /* Skip items that live inside the others wrap — managed separately */
+          if (othersWrap && othersWrap.contains(item)) return;
           if (category === 'all' || item.getAttribute('data-category') === category) {
             item.style.display = '';
           } else {
             item.style.display = 'none';
           }
         });
+
+        if (othersWrap) {
+          othersWrap.style.display = (category === 'others' || category === 'all') ? '' : 'none';
+        }
       });
     });
   }

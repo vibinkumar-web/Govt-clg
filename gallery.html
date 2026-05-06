@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,6 +7,24 @@
   <title>Gallery | Government Arts and Science College, Sankarankovil</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="images/sankarankovil-college-logo-1.png" type="image/png">
+  <style>
+    .gallery-others-wrap { margin-top: 0.5rem; }
+    .gallery-sub-section { margin-bottom: 3rem; }
+    .gallery-sub-title {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      padding-bottom: 0.55rem;
+      margin-bottom: 1.1rem;
+      border-bottom: 2px solid var(--accent-gold);
+    }
+    .gallery-sub-icon { font-size: 1.1rem; }
+  </style>
 </head>
 <body>
 
@@ -62,6 +80,7 @@
             <li><a href="principal.html">Principal</a></li>
             <li><a href="non-teaching-staff.html">Non Teaching Staff</a></li>
             <li><a href="committee.html">Committee</a></li>
+            <li><a href="award-recognition.html">Award &amp; Recognition</a></li>
           </ul>
         </div>
         <div class="nav-dropdown">
@@ -82,6 +101,7 @@
           <ul class="dropdown-menu">
             <li><a href="nss.html">NSS</a></li>
             <li><a href="yrc.html">YRC</a></li>
+            <li><a href="rrc.html">RRC</a></li>
             <li><a href="sports.html">Sports</a></li>
           </ul>
         </div>
@@ -112,6 +132,8 @@
         <button class="filter-btn" data-filter="events">Events</button>
         <button class="filter-btn" data-filter="graduation">Graduation Day</button>
         <button class="filter-btn" data-filter="staff">Staff</button>
+        <button class="filter-btn" data-filter="others">Others</button>
+        
       </div>
 
       <!-- Gallery Grid -->
@@ -221,7 +243,110 @@
           <div class="gallery-caption">College Staff — 6</div>
         </div>
 
-      </div>
+
+      </div><!-- /.gallery-grid -->
+
+      <!-- ── Others Section (shown when "Others" or "All" filter active) ── -->
+      <div class="gallery-others-wrap" id="galleryOthers" style="display:none;">
+
+        <!-- PTA Meeting -->
+        <div class="gallery-sub-section">
+          <h3 class="gallery-sub-title">
+            <span class="gallery-sub-icon">&#128101;</span> PTA Meeting
+          </h3>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/PTA, Meeting/1.jpg" alt="PTA Meeting 1">
+              <div class="gallery-caption">PTA Meeting — 1</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/PTA, Meeting/2.jpg" alt="PTA Meeting 2">
+              <div class="gallery-caption">PTA Meeting — 2</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/PTA, Meeting/3.jpg" alt="PTA Meeting 3">
+              <div class="gallery-caption">PTA Meeting — 3</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/PTA, Meeting/4.jpg" alt="PTA Meeting 4">
+              <div class="gallery-caption">PTA Meeting — 4</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/PTA, Meeting/5.jpg" alt="PTA Meeting 5">
+              <div class="gallery-caption">PTA Meeting — 5</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exposure Visit +2 -->
+        <div class="gallery-sub-section">
+          <h3 class="gallery-sub-title">
+            <span class="gallery-sub-icon">&#9992;</span> Exposure Visit +2
+          </h3>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/Exposure visit +2/1.jpg" alt="Exposure Visit +2 — 1">
+              <div class="gallery-caption">Exposure Visit +2 — 1</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/Exposure visit +2/2.jpg" alt="Exposure Visit +2 — 2">
+              <div class="gallery-caption">Exposure Visit +2 — 2</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/Exposure visit +2/3.jpg" alt="Exposure Visit +2 — 3">
+              <div class="gallery-caption">Exposure Visit +2 — 3</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/Exposure visit +2/4.jpg" alt="Exposure Visit +2 — 4">
+              <div class="gallery-caption">Exposure Visit +2 — 4</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/Exposure visit +2/5.jpg" alt="Exposure Visit +2 — 5">
+              <div class="gallery-caption">Exposure Visit +2 — 5</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/Exposure visit +2/6.jpg" alt="Exposure Visit +2 — 6">
+              <div class="gallery-caption">Exposure Visit +2 — 6</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- First Year Orientation Programme -->
+        <div class="gallery-sub-section">
+          <h3 class="gallery-sub-title">
+            <span class="gallery-sub-icon">&#127891;</span> First Year Orientation Programme
+          </h3>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/First year Orientation Programme/1.jpg" alt="First Year Orientation Programme 1">
+              <div class="gallery-caption">Orientation Programme — 1</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/First year Orientation Programme/2.jpg" alt="First Year Orientation Programme 2">
+              <div class="gallery-caption">Orientation Programme — 2</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Red Ribbon Club (RRC) -->
+        <div class="gallery-sub-section">
+          <h3 class="gallery-sub-title">
+            <span class="gallery-sub-icon">&#127978;</span> Red Ribbon Club (RRC)
+          </h3>
+          <div class="gallery-grid">
+            <div class="gallery-item">
+              <img src="images/RRC/1.jpeg" alt="Red Ribbon Club 1">
+              <div class="gallery-caption">Red Ribbon Club (RRC) — 1</div>
+            </div>
+            <div class="gallery-item">
+              <img src="images/RRC/2.jpeg" alt="Red Ribbon Club 2">
+              <div class="gallery-caption">Red Ribbon Club (RRC) — 2</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.gallery-others-wrap -->
+
     </div>
   </section>
 
