@@ -27,12 +27,26 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', handleScroll);
 
   /* ---------- Mobile Hamburger Menu ---------- */
+  function openMobileMenu() {
+    if (hamburger) hamburger.classList.add('active');
+    if (navLinks) navLinks.classList.add('open');
+    if (navOverlay) navOverlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    if (hamburger) hamburger.classList.remove('active');
+    if (navLinks) navLinks.classList.remove('open');
+    if (navOverlay) navOverlay.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
   function toggleMobileMenu() {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('open');
-    if (navOverlay) navOverlay.classList.toggle('show');
-    /* Prevent body scroll when menu is open */
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    if (navLinks && navLinks.classList.contains('open')) {
+      closeMobileMenu();
+    } else {
+      openMobileMenu();
+    }
   }
 
   if (hamburger) {
@@ -40,18 +54,15 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (navOverlay) {
-    navOverlay.addEventListener('click', toggleMobileMenu);
+    navOverlay.addEventListener('click', closeMobileMenu);
   }
 
-  /* Close mobile menu only when a real page link (not dropdown toggle) is clicked */
+  /* Close mobile menu when a real page link (not dropdown toggle) is clicked */
   if (navLinks) {
     navLinks.querySelectorAll('a').forEach(function (link) {
       link.addEventListener('click', function () {
-        /* Don't close if this is a dropdown toggle */
         if (this.classList.contains('dropdown-toggle')) return;
-        if (navLinks.classList.contains('open')) {
-          toggleMobileMenu();
-        }
+        closeMobileMenu();
       });
     });
   }
@@ -87,11 +98,15 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- Smooth Scroll for Anchor Links ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
-      var target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      try {
+        var target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      } catch (err) { /* ignore invalid selectors */ }
     });
   });
 
@@ -166,9 +181,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /* ---------- Gallery Category Filter ---------- */
   if (filterBtns.length && galleryItems.length) {
     var othersWrap = document.getElementById('galleryOthers');
+    var newsWrap   = document.getElementById('galleryNews');
 
-    /* Show others wrap on initial load (All is default active) */
+    /* Show both wrap sections on initial load (All is default active) */
     if (othersWrap) othersWrap.style.display = '';
+    if (newsWrap)   newsWrap.style.display   = '';
 
     filterBtns.forEach(function (btn) {
       btn.addEventListener('click', function () {
@@ -178,8 +195,9 @@ document.addEventListener('DOMContentLoaded', function () {
         var category = this.getAttribute('data-filter');
 
         galleryItems.forEach(function (item) {
-          /* Skip items that live inside the others wrap — managed separately */
+          /* Skip items inside managed wrap sections */
           if (othersWrap && othersWrap.contains(item)) return;
+          if (newsWrap   && newsWrap.contains(item))   return;
           if (category === 'all' || item.getAttribute('data-category') === category) {
             item.style.display = '';
           } else {
@@ -189,6 +207,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (othersWrap) {
           othersWrap.style.display = (category === 'others' || category === 'all') ? '' : 'none';
+        }
+        if (newsWrap) {
+          newsWrap.style.display = (category === 'news' || category === 'all') ? '' : 'none';
         }
       });
     });
