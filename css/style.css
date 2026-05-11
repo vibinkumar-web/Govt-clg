@@ -532,7 +532,7 @@ h4 { font-size: 1.15rem; }
     content: 'Navigation';
     display: block;
     width: 100%;
-    padding: calc(var(--nav-height) + 1rem) 1.4rem 0.85rem;
+    padding: 30px 1.4rem 0.85rem;
     color: var(--accent-gold);
     font-family: var(--font-heading);
     font-size: 0.72rem;
