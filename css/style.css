@@ -12,7 +12,7 @@
   --primary-navy:   #1a2a6c;
   --accent-maroon:  #8b1a2b;
   --accent-blue:    #2980b9;
-  --accent-gold:    #c9a227;
+  --accent-gold:    #f5c518;
   --bg-light:       #f5f7fa;
   --bg-white:       #ffffff;
   --text-dark:      #222222;
@@ -546,7 +546,7 @@ h4 { font-size: 1.15rem; }
 
 .hero-content .hero-badge {
   display: inline-block;
-  background: var(--accent-gold);
+  background: #f5c518;
   color: var(--primary-navy);
   padding: 0.4rem 1.4rem;
   border-radius: 50px;
@@ -662,6 +662,106 @@ h4 { font-size: 1.15rem; }
 /* ---------- ABOUT SECTION REDESIGN ---------- */
 .about-section {
   background: linear-gradient(135deg, #f0f4ff 0%, #fff8f0 100%);
+}
+
+.about-section .container {
+  width: 96%;
+  max-width: 1440px;
+}
+
+.about-section-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: var(--gap-lg);
+  align-items: center;
+}
+
+/* Quick Links Sidebar */
+.quick-links-sidebar {
+  background: var(--primary-navy);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.quick-links-header {
+  background: var(--accent-gold);
+  padding: 1.1rem 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.quick-links-icon {
+  font-size: 1.3rem;
+}
+
+.quick-links-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-navy);
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.quick-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.quick-links-list li {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.quick-links-list li:last-child {
+  border-bottom: none;
+}
+
+.quick-link-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.4rem;
+  color: #d0d8f0;
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  transition: background 0.2s, color 0.2s, padding-left 0.2s;
+}
+
+.quick-link-item:hover {
+  background: rgba(255,255,255,0.07);
+  color: var(--accent-gold);
+  padding-left: 1.7rem;
+}
+
+.quick-link-arrow {
+  font-size: 1.2rem;
+  color: var(--accent-gold);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.quick-links-cta {
+  display: block;
+  margin: 1rem 1.4rem 1.4rem;
+  text-align: center;
+  background: var(--accent-gold);
+  color: var(--primary-navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.quick-links-cta:hover {
+  background: #d4ac14;
+  transform: translateY(-1px);
 }
 
 .about-card {
@@ -1215,12 +1315,12 @@ h4 { font-size: 1.15rem; }
 .dept-card:nth-child(5) .btn { border-color: #5c3190; color: #5c3190; }
 .dept-card:nth-child(6) .btn { border-color: #a33a14; color: #a33a14; }
 
-.dept-card:nth-child(1) .btn:hover { background: #1a2f6b; }
-.dept-card:nth-child(2) .btn:hover { background: #8b1c2e; }
-.dept-card:nth-child(3) .btn:hover { background: #1565c0; }
-.dept-card:nth-child(4) .btn:hover { background: #1a6e3c; }
-.dept-card:nth-child(5) .btn:hover { background: #5c3190; }
-.dept-card:nth-child(6) .btn:hover { background: #a33a14; }
+.dept-card:nth-child(1) .btn:hover { background: #1a2f6b; color: #fff; }
+.dept-card:nth-child(2) .btn:hover { background: #8b1c2e; color: #fff; }
+.dept-card:nth-child(3) .btn:hover { background: #1565c0; color: #fff; }
+.dept-card:nth-child(4) .btn:hover { background: #1a6e3c; color: #fff; }
+.dept-card:nth-child(5) .btn:hover { background: #5c3190; color: #fff; }
+.dept-card:nth-child(6) .btn:hover { background: #a33a14; color: #fff; }
 
 /* ---------- FACULTY CARDS ---------- */
 .faculty-grid {
@@ -1953,6 +2053,10 @@ h4 { font-size: 1.15rem; }
   }
 
   /* About Card */
+  .about-section-layout {
+    grid-template-columns: 1fr;
+  }
+
   .about-card {
     grid-template-columns: 1fr;
   }
