@@ -521,6 +521,8 @@ h4 { font-size: 1.15rem; }
     transition: right 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: -8px 0 48px rgba(0,0,0,0.55);
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
     z-index: 1050;
     pointer-events: none;
   }

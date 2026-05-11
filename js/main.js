@@ -31,14 +31,22 @@ document.addEventListener('DOMContentLoaded', function () {
     if (hamburger) hamburger.classList.add('active');
     if (navLinks) navLinks.classList.add('open');
     if (navOverlay) navOverlay.classList.add('show');
-    document.body.style.overflow = 'hidden';
+    var scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + scrollY + 'px';
+    document.body.style.width = '100%';
+    document.body.dataset.scrollY = scrollY;
   }
 
   function closeMobileMenu() {
     if (hamburger) hamburger.classList.remove('active');
     if (navLinks) navLinks.classList.remove('open');
     if (navOverlay) navOverlay.classList.remove('show');
-    document.body.style.overflow = '';
+    var scrollY = document.body.dataset.scrollY || 0;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, parseInt(scrollY, 10));
   }
 
   function toggleMobileMenu() {
