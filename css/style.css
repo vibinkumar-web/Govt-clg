@@ -508,12 +508,12 @@ h4 { font-size: 1.15rem; }
   /* Right-side slide drawer */
   .nav-links {
     position: fixed;
-    top: var(--nav-height);
+    top: 0;
     left: auto;
     right: -310px;
     width: 290px;
-    height: calc(100vh - var(--nav-height));
-    height: calc(100dvh - var(--nav-height));
+    height: 100vh;
+    height: 100dvh;
     background: linear-gradient(170deg, #1e3275 0%, #162155 55%, #0f1840 100%);
     flex-direction: column;
     align-items: flex-start;
@@ -529,12 +529,12 @@ h4 { font-size: 1.15rem; }
     pointer-events: none;
   }
 
-  /* Drawer label header */
+  /* Drawer label header — top padding clears the sticky navbar */
   .nav-links::before {
     content: 'Navigation';
     display: block;
     width: 100%;
-    padding: 0.4rem 1.4rem 0.85rem;
+    padding: 0.6rem 1.4rem 0.6rem;
     color: var(--accent-gold);
     font-family: var(--font-heading);
     font-size: 0.72rem;
@@ -2555,10 +2555,7 @@ h4 { font-size: 1.15rem; }
 .nav-overlay {
   display: none;
   position: fixed;
-  top: var(--nav-height);
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: rgba(0,0,0,0.5);
   z-index: 1040;
 }
