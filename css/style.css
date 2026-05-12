@@ -2384,22 +2384,95 @@ h4 { font-size: 1.15rem; }
 
   .section { padding: var(--gap-lg) 0; }
 
-  /* Header */
+  /* Header — keep 3-column row on mobile */
   .college-header .container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
   }
 
   .college-logo {
-    justify-content: center;
+    justify-content: flex-start;
+    flex-shrink: 0;
   }
 
-  .header-right {
+  .college-logo img {
+    width: 52px !important;
+    height: 52px !important;
+  }
+
+  .college-name {
+    flex: 1;
     text-align: center;
+    padding: 0 0.2rem;
   }
 
   .college-name h1 {
-    font-size: 1.25rem;
+    font-size: 0.88rem;
+    line-height: 1.35;
+    margin-bottom: 0.15rem;
+  }
+
+  .college-name .tagline {
+    font-size: 0.68rem;
+    line-height: 1.45;
+    display: block;
+  }
+
+  .header-right {
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  .header-right img {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  /* Top bar — compact single row on mobile */
+  .top-bar {
+    padding: 0.45rem 0;
+  }
+
+  .top-bar .container {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  /* Hide the welcome text on mobile — redundant next to the college header */
+  .top-bar .container > span:first-child {
+    display: none;
+  }
+
+  .top-bar-contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+
+  .top-bar-contact span {
+    font-size: 0.75rem;
+    padding: 0.1rem 0.65rem;
+    gap: 0.25rem;
+    position: relative;
+  }
+
+  /* Vertical pipe separator between items */
+  .top-bar-contact span + span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: rgba(255,255,255,0.25);
   }
 
   /* Navigation — handled by @media (max-width: 900px) block above */
@@ -2526,14 +2599,33 @@ h4 { font-size: 1.15rem; }
 
 /* ---------- RESPONSIVE: Small Mobile (≤ 480px) ---------- */
 @media (max-width: 480px) {
-  .top-bar .container {
-    flex-direction: column;
-    text-align: center;
+  /* Header — shrink further on very small screens */
+  .college-logo img {
+    width: 42px !important;
+    height: 42px !important;
   }
 
-  .top-bar-contact {
-    flex-direction: column;
-    gap: 0.3rem;
+  .college-header .container {
+    gap: 0.35rem;
+  }
+
+  .college-name h1 {
+    font-size: 0.78rem;
+  }
+
+  .college-name .tagline {
+    font-size: 0.62rem;
+  }
+
+  .header-right img {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  /* Top bar — stack contact items on very small screens */
+  .top-bar-contact span {
+    font-size: 0.72rem;
+    padding: 0.1rem 0.5rem;
   }
 
   .stats-grid {
@@ -2832,19 +2924,81 @@ h4 { font-size: 1.15rem; }
   border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
+/* Dept hamburger — hidden on desktop */
+.dept-hamburger {
+  display: none;
+}
+
 /* Mobile responsiveness for dept-navbar */
 @media (max-width: 850px) {
   .dept-navbar .container {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .dept-brand {
+    flex: 1;
+    padding: 0;
+  }
+
+  .dept-hamburger {
+    display: flex;
     flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 6px 8px;
+    flex-shrink: 0;
   }
+
+  .dept-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: transform 0.28s ease, opacity 0.2s ease;
+  }
+
+  .dept-hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  .dept-hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .dept-hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
   .dept-nav-links {
+    display: none;
+    flex-direction: column;
     width: 100%;
-    overflow-x: auto;
-    justify-content: flex-start;
+    overflow-x: visible;
+    border-top: 1px solid rgba(255,255,255,0.1);
   }
+
+  .dept-nav-links.open {
+    display: flex;
+  }
+
   .dept-nav-links .tab-link {
-    white-space: nowrap;
-    padding: 1rem 0.8rem;
+    width: 100%;
+    text-align: left;
+    padding: 0.85rem 1.2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    white-space: normal;
+    font-size: 0.83rem;
+    border-radius: 0;
+  }
+
+  .dept-nav-links .tab-link:last-child {
+    border-bottom: none;
   }
 }
 

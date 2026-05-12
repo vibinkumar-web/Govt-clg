@@ -312,6 +312,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  /* ---------- Department Navbar Hamburger ---------- */
+  const deptHamburger = document.querySelector('.dept-hamburger');
+  const deptNavLinks  = document.querySelector('.dept-nav-links');
+
+  if (deptHamburger && deptNavLinks) {
+    deptHamburger.addEventListener('click', function () {
+      deptHamburger.classList.toggle('active');
+      deptNavLinks.classList.toggle('open');
+    });
+
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 850) {
+        deptHamburger.classList.remove('active');
+        deptNavLinks.classList.remove('open');
+      }
+    });
+  }
+
   /* ---------- Department Tab System ---------- */
   const tabLinks = document.querySelectorAll('.dept-nav-links .tab-link[data-tab]');
   const tabPanes = document.querySelectorAll('.tab-pane');
@@ -341,6 +359,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (targetPane) {
           targetPane.classList.add('active');
         }
+
+        // Close the mobile dept menu after selecting a tab
+        if (deptHamburger) deptHamburger.classList.remove('active');
+        if (deptNavLinks)  deptNavLinks.classList.remove('open');
       });
     });
   }
