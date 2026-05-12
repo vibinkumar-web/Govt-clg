@@ -378,8 +378,8 @@ h4 { font-size: 1.15rem; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 14px;
-  height: 14px;
+  width: 18px;
+  height: 18px;
   position: relative;
   flex-shrink: 0;
   transition: transform 0.22s ease;
@@ -391,8 +391,8 @@ h4 { font-size: 1.15rem; }
   position: absolute;
   background: currentColor;
   border-radius: 2px;
-  width: 6px;
-  height: 1.5px;
+  width: 8px;
+  height: 2px;
   top: 50%;
   transition: transform 0.22s ease;
 }
