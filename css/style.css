@@ -1306,6 +1306,12 @@ h4 { font-size: 1.15rem; }
 .course-card:nth-child(4) { border-top-color: #1a7a4a; }
 .course-card:nth-child(5) { border-top-color: #6a3d9a; }
 
+.course-card:nth-child(1) .icon { color: var(--primary-navy); }
+.course-card:nth-child(2) .icon { color: var(--accent-maroon); }
+.course-card:nth-child(3) .icon { color: var(--accent-blue); }
+.course-card:nth-child(4) .icon { color: #1a7a4a; }
+.course-card:nth-child(5) .icon { color: #6a3d9a; }
+
 .course-card:hover {
   transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
