@@ -6,7 +6,7 @@
   <meta name="description" content="Gallery — explore campus life, events, labs, and facilities at Government Arts and Science College, Sankarankovil through our photo gallery.">
   <title>Gallery | Government Arts and Science College, Sankarankovil</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="images/sankarankovil-college-logo-1.png" type="image/png">
+  <link rel="icon" href="images/Logo/sankarankovil-college-logo-1.png" type="image/png">
   <style>
     .gallery-others-wrap { margin-top: 0.5rem; }
     .gallery-sub-section { margin-bottom: 3rem; }
@@ -24,6 +24,8 @@
       border-bottom: 2px solid var(--accent-gold);
     }
     .gallery-sub-icon { font-size: 1.1rem; }
+    .gallery-col { columns: 1 !important; }
+    .gallery-col .gallery-item { width: 100%; max-width: 420px; }
   </style>
 </head>
 <body>
@@ -44,14 +46,14 @@
   <header class="college-header">
     <div class="container">
       <div class="college-logo">
-        <img src="images/sankarankovil-college-logo-1.png" alt="GASC Sankarankovil Logo" style="width:70px;height:70px;object-fit:contain;">
+        <img src="images/Logo/sankarankovil-college-logo-1.png" alt="GASC Sankarankovil Logo" style="width:70px;height:70px;object-fit:contain;">
       </div>
       <div class="college-name">
         <h1>Government Arts and Science College, Sankarankovil</h1>
         <span class="tagline">Affiliated to Manonmaniam Sundaranar University | Estd. June 2020</span>
       </div>
       <div class="header-right">
-        <img src="images/Emblem_of_Tamil_Nadu.svg.png" alt="Tamil Nadu Emblem" style="width:65px;height:65px;object-fit:contain;">
+        <img src="images/Logo/Emblem_of_Tamil_Nadu.svg.png" alt="Tamil Nadu Emblem" style="width:65px;height:65px;object-fit:contain;">
       </div>
     </div>
   </header>
@@ -215,34 +217,9 @@
         </div>
 
         <!-- Staff Photos -->
-        <div class="gallery-item" data-category="staff">
-          <img src="images/Staff/Staffs.jpeg" alt="College Staff 1">
+        <div class="gallery-item" data-category="staff" style="width:300px;height:300px;flex:none;">
+          <img src="images/Staff/General-Staff/Staffs.jpeg" alt="College Staff 1" style="width:100%;height:100%;object-fit:cover;">
           <div class="gallery-caption">College Staff — 1</div>
-        </div>
-
-        <div class="gallery-item" data-category="staff">
-          <img src="" alt="College Staff 2">
-          <div class="gallery-caption">College Staff — 2</div>
-        </div>
-
-        <div class="gallery-item" data-category="staff">
-          <img src="" alt="College Staff 3">
-          <div class="gallery-caption">College Staff — 3</div>
-        </div>
-
-        <div class="gallery-item" data-category="staff">
-          <img src="" alt="College Staff 4">
-          <div class="gallery-caption">College Staff — 4</div>
-        </div>
-
-        <div class="gallery-item" data-category="staff">
-          <img src="" alt="College Staff 5">
-          <div class="gallery-caption">College Staff — 5</div>
-        </div>
-
-        <div class="gallery-item" data-category="staff">
-          <img src="" alt="College Staff 6">
-          <div class="gallery-caption">College Staff — 6</div>
         </div>
 
 
@@ -256,7 +233,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#128101;</span> PTA Meeting
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/PTA, Meeting/1.jpg" alt="PTA Meeting 1">
               <div class="gallery-caption">PTA Meeting — 1</div>
@@ -285,7 +262,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#9992;</span> Exposure Visit +2
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/Exposure-visit-2/1.jpg" alt="Exposure Visit +2 — 1">
               <div class="gallery-caption">Exposure Visit +2 — 1</div>
@@ -318,7 +295,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#127891;</span> First Year Orientation Programme
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/First year Orientation Programme/1.jpg" alt="First Year Orientation Programme 1">
               <div class="gallery-caption">Orientation Programme — 1</div>
@@ -335,7 +312,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#127978;</span> Red Ribbon Club (RRC)
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/RRC/1.jpeg" alt="Red Ribbon Club 1">
               <div class="gallery-caption">Red Ribbon Club (RRC) — 1</div>
@@ -352,7 +329,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#129504;</span> Gender Psychology
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/Gender-psychology/PHOTO-2025-11-23-13-09-25.jpg" alt="Gender Psychology 1">
               <div class="gallery-caption">Gender Psychology — 1</div>
@@ -369,7 +346,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#128657;</span> Road Safety Club
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/Road Safety Club/IMG_20260123_115146494.jpg" alt="Road Safety Club 1">
               <div class="gallery-caption">Road Safety Club — 1</div>
@@ -390,7 +367,7 @@
           <h3 class="gallery-sub-title">
             <span class="gallery-sub-icon">&#128240;</span> News &amp; Updates
           </h3>
-          <div class="gallery-grid">
+          <div class="gallery-grid gallery-col">
             <div class="gallery-item">
               <img src="images/News/News image 1.jpeg" alt="News 1">
               <div class="gallery-caption">News — 1</div>
